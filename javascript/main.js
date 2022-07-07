@@ -69,20 +69,20 @@
             console.log("tu valor final es el mismo "+valorTotal);
            }
     //pensado para los objetos//
-const vela1={ id:"1",
+const vela1= [{id:"1",
 aroma:"vainilla",
 envase:"vidrio",
-precio:550,}
+precio: "550",}]
 console.log(vela1);
 
-function Pijama(talle, precio, color, disponibilidad){
+function Pijama(talle, precio, color, disponibilidad,){
 this.talle=talle;
 this.precio=precio;
 this.color=color;
 this.disponibilidad;}
-pijama();
+Pijama();
 
-const pijama1=new Pijama(medium,400,gris,si);
+const pijama1=new Pijama("medium","400","gris","si",)
 console.log(pijama1);
 
 //array carrito de compras//
@@ -103,12 +103,9 @@ const productos= [
 
    console.log (productos);
    function filtrarPrecio (arr, filtro){
-     const filtrado = arr.filter ((el) => {
-          return el.precio.includes(filtro);
-     });
+     const filtrado = arr.filter((el) => {
+          return el.precio.finder(filtro); });
           return filtrado;}
-
-
-
+     
      const productosFiltrados= filtrarPrecio(productos,entrada);
      console.log(productosFiltrados);
